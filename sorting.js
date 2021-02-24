@@ -1,4 +1,3 @@
-// const newDiv = document.createElement('div');
 let newDiv, displayArr;
 const barWidth = 10;
 const barMainColor = '#5050aa';
@@ -6,15 +5,13 @@ const barSecondaryColor = '#aa5050';
 const barContainer = document.querySelector('.sorting-container');
 
 window.onload = function () {
+  displayArr = initializeArray();
   init();
-  console.log('loaded')
 };
 
 const init = () => {
   newDiv = document.createElement('div');
   newDiv.setAttribute('class', 'sorting-box');
-  displayArr = initializeArray();
-  // newDiv.setAttribute('id', 'sorting-box');
   barContainer.appendChild(newDiv);
   displayArray();
 }
@@ -27,8 +24,6 @@ const initializeArray = () => {
   return array;
 }
 
-// let displayArr = initializeArray();
-
 let displayArray = () => {
   for (let num of displayArr) {
     const barDiv = document.createElement('div');
@@ -37,7 +32,6 @@ let displayArray = () => {
     barDiv.style.backgroundColor = barMainColor;
     newDiv.appendChild(barDiv);
   }
-  console.log('display')
 }
 
 let cleanUp = () => {
@@ -47,10 +41,8 @@ let cleanUp = () => {
   }
 }
 
-
-const newArray = () => {
+const newArrClickHandler = () => {
   cleanUp();
-  console.log('clicked')
+  displayArr = initializeArray();
   init();
-  // displayArray();
 }
