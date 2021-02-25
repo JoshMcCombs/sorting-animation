@@ -1,7 +1,7 @@
 let newDiv, displayArr;
 const barWidth = 10;
 const barMainColor = '#5050aa';
-const barSecondaryColor = '#aa5050';
+const barSecondaryColor = '#aa1050';
 const barContainer = document.querySelector('.sorting-container');
 
 window.onload = function () {
