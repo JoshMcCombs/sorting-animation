@@ -46,3 +46,10 @@ const newArrClickHandler = () => {
   displayArr = initializeArray();
   init();
 }
+
+const bubbleSortClickHandler = () => {
+  // bubbleSort(displayArr);
+  // cleanUp();
+  // init();
+  bubbleAnimation(displayArr);
+}

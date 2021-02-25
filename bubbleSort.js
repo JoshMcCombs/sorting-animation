@@ -1,28 +1,29 @@
-const bars = document.getElementsByClassName('array-item');
-
-let colorChange = (num) => {
-  bars[num].style.backgroundColor = barSecondaryColor;
-}
+let bars = document.getElementsByClassName('array-item');
 
 const swap = (arr, idx1, idx2) => {
   [arr[idx1], arr[idx2]] = [arr[idx2], arr[idx1]]
 }
 
-const bubbleSort = array => {
-  for (let i = array.length; i > 0; i--) {
-    let noSwaps = true;
-    displayArr[i]
-    for (let j = 0; j < i - 1; j++) {
-      if (array[j] > array[j + 1]) {
-        swap(array, j, (j + 1))
-        noSwaps = false;
-      }
-    }
-    if (noSwaps) break;
+const bubbleAnimation = (arr) => {
+  for (let i = arr.length; i > 0; i--) {
+    subBubble(arr, i);
   }
-  return array;
 }
 
-const bubbleSortHelper = () => {
-
+const subBubble = (arr, num) => {
+  for (let i = 0; i < num; i++) {
+    setTimeout(() => {
+      compare(arr, i)
+    }, 0);
+  }
+  function compare(arr, i) {
+    if (arr[i] > arr[i + 1]) {
+      swap(arr, i, i + 1);
+    }
+    cleanUp();
+    init();
+  }
 }
+
+// Maybe add color on compared indexes
+// In swap?
