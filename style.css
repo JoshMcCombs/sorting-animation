@@ -2,30 +2,41 @@
   width: 10px;
   display: inline-block;
   margin: 0 4px 0 0;
+  border: 2px solid #5050aa;
 }
 
 .btn {
-  padding: 8px;
+  padding: 12px 20px;
   margin-right: 20px;
   border-radius: 6px;
-  border: none;
-  background-color: #6c757d;
-  color: white;
+  outline:none;
 }
 
-.btn:hover {
-  background-color: #198754;
+.btn-grey {
+  border: 1px solid #6c757d;
+  background-color: #fff;
+  color: #6c757d;
+}
+
+.btn-grey:hover {
+  background-color: #6c757d;
   color: white;
 }
 
 .btn-container {
   display: flex;
   justify-content: center;
-  margin: 8px 0 0 0;
+  margin: 20px 0 0 0;
 }
 
 .sorting-container {
   display: flex;
   justify-content: center;
-  align-items: baseline;
+  margin-top: 20px;
+  height: 120px;
+}
+
+.sorting-box {
+  display: flex;
+  flex-flow: wrap-reverse;
 }
