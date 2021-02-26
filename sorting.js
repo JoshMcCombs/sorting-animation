@@ -18,7 +18,7 @@ const init = () => {
 
 const initializeArray = () => {
   let array = [];
-  for (let i = 0; i < 60; i++) {
+  for (let i = 0; i < 70; i++) {
     array.push(Math.floor(Math.random() * 100) + 5);
   }
   return array;
@@ -29,7 +29,6 @@ let displayArray = () => {
     const barDiv = document.createElement('div');
     barDiv.style.height = `${num}px`;
     barDiv.setAttribute('class', 'array-item');
-    barDiv.style.backgroundColor = barMainColor;
     newDiv.appendChild(barDiv);
   }
 }
@@ -48,8 +47,5 @@ const newArrClickHandler = () => {
 }
 
 const bubbleSortClickHandler = () => {
-  // bubbleSort(displayArr);
-  // cleanUp();
-  // init();
   bubbleAnimation(displayArr);
 }
